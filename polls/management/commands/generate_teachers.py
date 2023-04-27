@@ -27,4 +27,6 @@ class Command(BaseCommand):
                     age=fake.random_int(min=24, max=80),
                     email=fake.email(),
                 )
-            self.stdout.write(self.style.SUCCESS(f"Successfully generated {count} people!"))
+            self.stdout.write(
+                self.style.SUCCESS(f"Successfully generated {count} people!")
+            )
