@@ -1,6 +1,6 @@
 name: Lint
 
-on: [ pull_request ]
+on: [ push, pull_request ]
 
 jobs:
   lint:
@@ -10,4 +10,3 @@ jobs:
       - uses: psf/black@stable
         with:
           options: "--check"
-          jupyter: true
