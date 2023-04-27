@@ -1,6 +1,6 @@
 name: Lint
 
-on: [ push, pull_request ]
+on: [ pull_request ]
 
 jobs:
   lint:
@@ -8,3 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: psf/black@stable
+      - name: Setup Python
+        uses: actions/setup-python@v4.6.0
+        with:
+          python-version: '3.11'
+      - run: black --check ./
